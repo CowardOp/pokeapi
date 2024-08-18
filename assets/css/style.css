@@ -13,6 +13,7 @@
 }
 
 body {
+  background-image: url(../src/fondo-pokemon.jpg);
   background-color: var(--white);
 }
 
@@ -37,7 +38,7 @@ main {
 
 .title {
   font-size: 3rem;
-  color: var(--black);
+  color: var(--beige);
 }
 
 .browser_input {
@@ -73,19 +74,20 @@ main {
 
 .button_browser:hover {
   background-color: var(--purple);
+  transform: scale(1.1);
 }
 
 .title_enunciado {
-  color: rgba(2, 21, 38, 0.9);
+  font-size: 1.3rem;
+  color: var(--beige);
 }
 .pokemon_info {
-  /* visibility: hidden; */
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 350px;
   height: 450px;
-  background-color: var(--white);
+  background-color: transparent;
   font-family: var(--font);
   text-align: center;
   border-radius: 12px;
