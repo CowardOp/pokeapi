@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar pokemon</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    />
+  </head>
+  
+    <main>
+      <section class="browser">
+        <h1 class="title">¡Cuál es este Pokémon?!</h1>
+        <div class="browser_input">
+          <input
+            class="pokemon_name"
+            type="text"
+            id="pokemonName"
+            placeholder="Ingresa el nombre o número del Pokémon"
+          />
+          <button id="browserButton" class="button_browser">
+            <i class="fa-solid fa-telescope"></i>
+          </button>
+        </div>
+        <h2 class="title_enunciado">Información del Pokémon</h2>
+      </section>
+      <section class="info">
+        <div class="pokemon_info_card" id="card"></div>
+        <div class="pokemon_info" id="pokemonInfo"></div>
+      </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
