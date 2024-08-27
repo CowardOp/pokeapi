@@ -28,7 +28,7 @@ function displayPokemonInfo(data) {
   const pokemonInfoDiv = document.getElementById("pokemonInfo");
   pokemonInfoDiv.innerHTML = `
         <h2>${data.name.toUpperCase()}</h2>
-        <img src="${data.sprites.front_default}" alt="${data.name}">
+        <img src="${data.sprites.other["official-artwork"].front_default}" alt="${data.name}">
         <p>Número de la Pokédex: ${data.id}</p>
         <p>Altura: ${data.height / 10} m</p>
         <p>Peso: ${data.weight / 10} kg</p>
