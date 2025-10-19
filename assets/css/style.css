@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dorsa&family=Lexend+Deca:wght@100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap");
+
 :root {
   --black: #021526;
   --blue: #6482ad;
@@ -12,9 +13,14 @@
   --font: "Lexend Deca", sans-serif;
 }
 
+/* ---------- BASE ---------- */
 body {
   background-image: url(../src/fondo-pokemon.jpg);
   background-color: var(--white);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -23,7 +29,10 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  padding: 20px;
 }
+
+/* ---------- NAVEGADOR ---------- */
 .browser {
   user-select: none;
   text-align: center;
@@ -45,6 +54,7 @@ main {
   display: flex;
   width: 100%;
   justify-content: center;
+  max-width: 600px;
 }
 
 .pokemon_name {
@@ -77,10 +87,12 @@ main {
   transform: scale(1.1);
 }
 
+/* ---------- INFO ---------- */
 .title_enunciado {
   font-size: 1.3rem;
   color: var(--beige);
 }
+
 .pokemon_info {
   display: flex;
   flex-direction: column;
@@ -91,8 +103,9 @@ main {
   font-family: var(--font);
   text-align: center;
   border-radius: 12px;
-  z-index: -1;
+  position: relative;
 }
+
 .pokemon_info h2 {
   width: 100%;
   padding: 5px 0;
@@ -128,5 +141,126 @@ main {
   z-index: 1;
 }
 
+/* ---------- RESPONSIVIDAD ---------- */
+
+/* --- Tablets medianas y pantallas pequeñas --- */
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .pokemon_info {
+    width: 300px;
+    height: 400px;
+  }
+
+  .pokemon_info img {
+    width: 200px;
+  }
+}
+
+/* --- Tablets verticales y móviles grandes --- */
+@media screen and (max-width: 768px) {
+  main {
+    gap: 30px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .pokemon_name {
+    width: 75%;
+    font-size: 1.3rem;
+  }
+
+  .button_browser {
+    width: 45px;
+    font-size: 1.2rem;
+  }
+
+  .pokemon_info {
+    width: 280px;
+    height: auto;
+  }
+
+  .pokemon_info h2 {
+    font-size: 1.6rem;
+  }
+
+  .pokemon_info p {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- Celulares --- */
+@media screen and (max-width: 480px) {
+  .browser {
+    margin-top: 10%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .title_enunciado {
+    font-size: 1rem;
+  }
+
+  .browser_input {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pokemon_name {
+    width: 90%;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border-right: 1.5px solid var(--blue);
+    margin-bottom: 10px;
+  }
+
+  .button_browser {
+    width: 90%;
+    border-radius: 12px;
+    font-size: 1.2rem;
+  }
+
+  .pokemon_info {
+    width: 90%;
+    height: auto;
+  }
+
+  .pokemon_info img {
+    width: 180px;
+  }
+
+  .pokemon_info_card {
+    width: 80%;
+    height: 200px;
+    margin: 0;
+  }
+}
+
+/* --- Pantallas muy pequeñas o antiguas --- */
 @media screen and (max-width: 365px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .pokemon_name {
+    font-size: 1rem;
+  }
+
+  .pokemon_info img {
+    width: 150px;
+  }
+
+  .pokemon_info h2 {
+    font-size: 1.3rem;
+  }
+
+  .pokemon_info p {
+    font-size: 1rem;
+  }
 }
